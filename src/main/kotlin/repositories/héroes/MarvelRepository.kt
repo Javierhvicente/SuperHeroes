@@ -1,13 +1,13 @@
 package org.example.repositories.héroes
 
-import org.example.models.HéroeMarvel
+import org.example.models.MarvelHero
 import org.example.repositories.base.CrudRepository
 
-class MarvelRepository: CrudRepository<HéroeMarvel, Int> {
-    private var marvelHeroes: Array<HéroeMarvel?> = arrayOfNulls<HéroeMarvel>(10)
+class MarvelRepository: CrudRepository<MarvelHero, Int> {
+    private var marvelHeroes: Array<MarvelHero?> = arrayOfNulls<MarvelHero>(10)
     private var key: Int = 1
-    override fun getAll(): Array<HéroeMarvel?> {
-        val heroesNoNulos = Array<HéroeMarvel?>(marvelHeroes.size - contarNulos()){null}
+    override fun getAll(): Array<MarvelHero?> {
+        val heroesNoNulos = Array<MarvelHero?>(marvelHeroes.size - contarNulos()){null}
         var index = 0
         for (i in marvelHeroes.indices){
             if(marvelHeroes[i] != null){
@@ -28,19 +28,19 @@ class MarvelRepository: CrudRepository<HéroeMarvel, Int> {
         return nulos
     }
 
-    override fun delete(key: Int): HéroeMarvel? {
+    override fun delete(key: Int): MarvelHero? {
         TODO("Not yet implemented")
     }
 
-    override fun update(key: Int, value: HéroeMarvel): HéroeMarvel? {
+    override fun update(key: Int, value: MarvelHero): MarvelHero? {
         TODO("Not yet implemented")
     }
 
-    override fun save(value: HéroeMarvel): HéroeMarvel {
+    override fun save(value: MarvelHero): MarvelHero {
         TODO("Not yet implemented")
     }
 
-    override fun getById(key: Int): HéroeMarvel? {
+    override fun getById(key: Int): MarvelHero? {
         TODO("Not yet implemented")
     }
 }

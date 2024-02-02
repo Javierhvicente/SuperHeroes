@@ -10,7 +10,10 @@ repositories {
 }
 
 dependencies {
+    implementation("org.lighthousegames:logging:1.3.0")
+    implementation("ch.qos.logback:logback-classic:1.4.11")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("io.mockk:mockk:1.13.9")
 }
 
 tasks.test {
